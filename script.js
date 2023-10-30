@@ -7,7 +7,7 @@ closedCookieImg.addEventListener('click', openCookie)
 btnReset.addEventListener('click', toogleCookie)
 
 function openCookie() {
-    fetch('/proverbs.txt')
+    fetch('proverbs.txt')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText)
