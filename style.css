@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-family: 'Dancing Script', cursive;
+    
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+	animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    font-family: 'DM Sans', sans-serif;
+    color: #34355B;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 26.75rem;
+    padding: 3rem 4rem 4rem 4rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.3125rem;
+    background: #FFF;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+img {
+    width: 15rem;
+    height: 12rem;
+    padding: 1.5rem;
+    cursor: pointer;
+}
+
+.closed-cookie img:hover {
+    animation: vibrate 0.3s linear infinite both;
+}
+
+button {
+    border: 0;
+    border-radius: 0.25rem;
+    background: #FF9500;
+    padding: 1rem;
+    cursor: pointer;
+
+    color: #FFF;
+    text-align: center;
+    font-weight: 700;
+    transition: background .3s;
+}
+
+button:hover {
+    background: #EAB363;
+}
+
+.opened-cookie p {
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    padding: 0.6rem;
+
+    color: #000;
+    font-family: Dancing Script;
+    font-size: 1.5rem;
+
+    animation: slide-fwd-top 0.6s ease-in both;
+}
+
+.opened-cookie img {
+    cursor: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+ @keyframes vibrate {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(2px, -2px);
+    }
+    40% {
+      transform: translate(2px, 2px);
+    }
+    60% {
+      transform: translate(-2px, 2px);
+    }
+    80% {
+      transform: translate(-2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+@keyframes slide-fwd-top {
+    0% {
+      transform: translateZ(0px) translateY(160px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(160px) translateY(0px);
+      opacity: 1;
+    }
+  }
+  
